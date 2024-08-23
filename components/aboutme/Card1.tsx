@@ -6,9 +6,9 @@ const Card1 = () => {
       <div className="w-full h-full absolute p-3">
         <img
           // src="/AboutMe.png
-          src="/4.png"
+          src="/2.png"
           alt="aboutMe"
-          className="object-cover object-center h-full w-full hover:scale-105 rounded-2xl duration-200"
+          className="object-cover md:object-contain lg:object-cover object-center h-full w-full hover:scale-105 rounded-2xl duration-200"
         />
       </div>
     </>

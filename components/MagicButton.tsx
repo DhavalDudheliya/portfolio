@@ -32,9 +32,15 @@ const MagicButton = ({
       <span
         className={`inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-3 text-sm font-medium text-white backdrop-blur-3xl gap-2 ${otherClasses}`}
       >
-        {position === "left" && icon}
-        {title}
-        {position === "right" && icon}
+        <span
+          className={`${
+            cv ? "text-green" : "text-white"
+          } inline-flex  items-center justify-center gap-2`}
+        >
+          {position === "left" && icon}
+          {title}
+          {position === "right" && icon}
+        </span>
       </span>
     </button>
   );

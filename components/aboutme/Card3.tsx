@@ -14,7 +14,7 @@ const Card3 = () => {
         My tech stack
       </div>
       <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
-        <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
+        <div className="flex flex-col gap-3 md:gap-3 lg:gap-7">
           {leftLists.map((item, i) => (
             <span
               key={i} 
@@ -33,7 +33,7 @@ const Card3 = () => {
           <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-[#10132E]"></span>
         </div>
         <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
-          <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-[#10132E]"></span>
+          <span className="lg:py-2 lg:px-3 py-4 px-3  rounded-lg text-center bg-[#10132E]"></span>
           {rightLists.map((item, i) => (
             <span
               key={i}

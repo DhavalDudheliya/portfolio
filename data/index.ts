@@ -10,7 +10,7 @@ export const gridItems = [
         id: 1,
         title: "My tech stack",
         description: "I constantly try to improve",
-        className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[55vh] md:min-h-[45vh] min-h-[30vh] ",
+        className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[57vh] md:min-h-[45vh] min-h-[30vh] ",
         imgClassName: "w-full h-full",
         titleClassName: "justify-end",
         img: "",
