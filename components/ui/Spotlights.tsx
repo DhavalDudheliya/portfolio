@@ -10,7 +10,7 @@ const Spotlights = () => {
       />
       <Spotlight className="top-10 left-full h-[80vh] w-[50vw]" fill="purple" />
       <Spotlight
-        className="top-28 left-80 h-[80vh] w-[50vw]"
+        className="top-28 left-80 h-[80vh] w-[50vw] z-10"
         // fill="#50ffb9"
         fill="blue"
       />

@@ -40,7 +40,7 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          <div className="order-1 xl:order-none mb-8 xl:mb-0">
+          <div className="order-1 xl:order-none mb-8 xl:mb-0 z-20">
             <Photo />
           </div>
         </div>
@@ -49,6 +49,5 @@ const Hero = () => {
     </section>
   );
 };
-
 
 export default Hero;

@@ -23,7 +23,7 @@ const ststs = [
 
 const Stats = () => {
   return (
-    <section className="pt-4 pb-12 xl:pt-28 xl:pb-0">
+    <section className="pt-4 pb-2 xl:pt-28">
       <div className="container mx-auto">
         <div className="inline-flex flex-wrap justify-between w-full gap-6  mx-auto xl:max-w-none">
           {ststs.map((stat, index) => {
