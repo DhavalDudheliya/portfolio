@@ -3,9 +3,7 @@
 import Grid from "@/components/Grid";
 import Hero from "@/components/Hero";
 import { FloatingNav } from "@/components/ui/FloatingNav";
-import { cn } from "@/lib/utils";
 import { HomeIcon } from "lucide-react";
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -15,7 +13,7 @@ export default function Home() {
           navItems={[{ name: "Home", link: "/", icon: <HomeIcon /> }]}
         />
         <Hero />
-        <Grid/>
+        <Grid />
         <div className="mt-10"></div>
       </div>
     </main>

@@ -1,16 +1,32 @@
 import React, { useState } from "react";
 import { BackgroundGradientAnimation } from "../ui/GradientBg";
 import MagicButton from "../MagicButton";
+import animationData from "@/data/confetti.json";
 import { CopyIcon } from "lucide-react";
+import Lottie from "react-lottie";
 
 const Card6 = () => {
   const [copied, setCopied] = useState(false);
 
+  const defaultOptions = {
+    loop: copied,
+    autoplay: copied,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+
   const handleCopy = () => {
-    const text = "hsu@jsmastery.pro";
+    const text = "dhavaldudheliya77@gmail.com";
     navigator.clipboard.writeText(text);
     setCopied(true);
+
+    setTimeout(() => {
+      setCopied(false);
+    }, 10000);
   };
+
   return (
     <>
       <BackgroundGradientAnimation>
@@ -31,15 +47,20 @@ const Card6 = () => {
             className={`absolute -bottom-5 right-0 ${
               copied ? "block" : "block"
             }`}
-          ></div>
+          >
+            <Lottie options={defaultOptions} height={200} width={400} />
+          </div>
 
-          <MagicButton
-            title={copied ? "Email is Copied!" : "Copy my email address"}
-            icon={<CopyIcon />}
-            position="left"
-            handleClick={handleCopy}
-            otherClasses="!bg-[#161A31]"
-          />
+          <div className="mt-5 md:mt-7">
+            <MagicButton
+              title={copied ? "Email is Copied!" : "Copy my email address"}
+              icon={<CopyIcon />}
+              position="left"
+              handleClick={handleCopy}
+              otherClasses="!bg-[#161A31]"
+              cv={false}
+            />
+          </div>
         </div>
       </div>
     </>
