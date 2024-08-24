@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const socials = [
   { icon: <FaGithub />, path: "https://github.com/DhavalDudheliya" },
@@ -21,8 +22,19 @@ const Socials = ({ containerStyles, iconStyles }: Props) => {
     <div className={containerStyles}>
       {socials.map((social, index) => {
         return (
-          <Link key={index} href={social.path} className={iconStyles}>
-            {social.icon}
+          <Link key={index} href={social.path} target="_blank">
+            <motion.p
+              initial={{ x: -1000 }}
+              animate={{ x: 0 }}
+              transition={{
+                // delay: (index + 1) / 10 - 1 + 0.3,
+                delay: 1.5 - (index + 1) / 20,
+                duration: 0.5,
+              }}
+              className={iconStyles}
+            >
+              {social.icon}
+            </motion.p>
           </Link>
         );
       })}

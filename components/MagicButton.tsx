@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 type Props = {
   title: string;
@@ -18,7 +19,7 @@ const MagicButton = ({
   cv,
 }: Props) => {
   return (
-    <button
+    <motion.button
       className="relative inline-flex h-10 lg:h-12 w-full overflow-hidden rounded-full p-[1px] focus:outline-none md:w-60"
       onClick={handleClick}
     >
@@ -42,7 +43,7 @@ const MagicButton = ({
           {position === "right" && icon}
         </span>
       </span>
-    </button>
+    </motion.button>
   );
 };
 

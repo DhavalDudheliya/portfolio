@@ -1,6 +1,7 @@
 "use client";
 
 import CountUp from "react-countup";
+import { motion } from "framer-motion";
 
 const ststs = [
   {
@@ -23,7 +24,14 @@ const ststs = [
 
 const Stats = () => {
   return (
-    <section className="pt-4 pb-2 xl:pt-28">
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{
+        opacity: 1,
+        transition: { delay: 1.2, duration: 0.4, ease: "easeIn" },
+      }}
+      className="pt-4 pb-2 xl:pt-28"
+    >
       <div className="container mx-auto">
         <div className="inline-flex flex-wrap justify-between w-full gap-6  mx-auto xl:max-w-none">
           {ststs.map((stat, index) => {
@@ -35,7 +43,7 @@ const Stats = () => {
                 <CountUp
                   end={stat.num}
                   duration={5}
-                  delay={1}
+                  delay={1.4}
                   className="text-4xl xl:text-6xl font-extrabold"
                 />
                 <p
@@ -50,7 +58,7 @@ const Stats = () => {
           })}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

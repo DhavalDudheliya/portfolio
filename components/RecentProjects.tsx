@@ -1,10 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
 import { projects } from "@/data";
 import React from "react";
-import { PinContainer } from "./ui/3d-pin";
-import Image from "next/image";
+import dynamic from "next/dynamic";
+const PinContainer = dynamic(
+  () => import("./ui/3d-pin").then((mod) => mod.PinContainer),
+  { ssr: false }
+);
 import { FaLocationArrow } from "react-icons/fa";
-import { FaCircleArrowRight, FaCircleDot } from "react-icons/fa6";
+import { FaCircleDot } from "react-icons/fa6";
 
 const RecentProjects = () => {
   return (
@@ -19,11 +22,8 @@ const RecentProjects = () => {
             className="sm:h-[41rem] h-[32rem] lg:min-h-[32.5rem] flex items-center justify-center sm:w-[570px] w-[80vh]"
           >
             <PinContainer title={link} href={link}>
-              <div className="relative flex items-center justify-center sm:w-[570px] w-[80vw] overflow-hidden sm:h-[40vh] h-[30vh] mb-10">
-                <div className="relative w-full h-full overflow-hidden lg:rounded-3xl bg-[#13162d]">
-                  <img src="/bg.png" alt="bg-img" />
-                </div>
-                <img src={img} alt={title} className="z-10 absolute bottom-0" />
+              <div className="relative flex items-center justify-center sm:w-[570px] w-[80vw] overflow-hidden sm:h-[40vh] mb-5  h-[30vh] rounded-xl">
+                <img src={img} alt={title} className="z-10" />
               </div>
               <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
                 {title}
