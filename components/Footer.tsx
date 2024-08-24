@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 import { FaLocationArrow } from "react-icons/fa6";
-
 import MagicButton from "./MagicButton";
 import {
   FaGithub,
@@ -21,18 +22,51 @@ const socials = [
 ];
 
 const Footer = () => {
+  // Hook for heading
+  const { ref: headingRef, inView: isHeadingInView } = useInView({
+    triggerOnce: true, // Animation triggers only once
+    threshold: 0.1, // Trigger when 10% of the component is visible
+  });
+
+  // Hook for social icons
+  const { ref: socialIconsRef, inView: areSocialIconsInView } = useInView({
+    triggerOnce: true, // Animation triggers only once
+    threshold: 0.1, // Trigger when 10% of the component is visible
+  });
+
   return (
     <footer className="w-full pt-20 pb-10" id="contact">
       <div className="flex flex-col items-center">
-        <h1 className="heading lg:max-w-[45vw]">
+        {/* Animate the heading */}
+        <motion.h1
+          ref={headingRef}
+          className="heading lg:max-w-[45vw]"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{
+            opacity: isHeadingInView ? 1 : 0,
+            y: isHeadingInView ? 0 : 50,
+          }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+        >
           Ready to take <span className="text-green">your</span> digital
           presence to the next level?
-        </h1>
+        </motion.h1>
+
         <p className="text-white-200 md:mt-5 mt-5 mb-10 text-center">
           Reach out to me today and let&apos;s discuss how I can help you
           achieve your goals.
         </p>
-        <div className="flex flex-col lg:flex-row gap-4">
+
+        <motion.div
+          ref={headingRef}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{
+            opacity: isHeadingInView ? 1 : 0,
+            y: isHeadingInView ? 0 : 50,
+          }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="flex flex-col lg:flex-row gap-4"
+        >
           <a target="_blank" href="mailto:dhavaldudheliya77@gmail.com">
             <MagicButton
               title="Let's get in touch"
@@ -49,14 +83,34 @@ const Footer = () => {
               cv
             />
           </a>
-        </div>
+        </motion.div>
       </div>
-      <div className="flex mt-16 md:flex-row flex-col justify-between items-center gap-4">
-        <p className="md:text-base text-sm md:font-normal font-light">
-          Copyright © 2024 Dhaval Dudheliya
-        </p>
 
-        <div className="flex items-center md:gap-3 gap-6">
+      <div className="flex mt-16 md:flex-row flex-col justify-between items-center gap-4">
+        <motion.p
+          ref={socialIconsRef}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{
+            opacity: areSocialIconsInView ? 1 : 0,
+            y: areSocialIconsInView ? 0 : 50,
+          }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="md:text-base text-sm md:font-normal font-light"
+        >
+          Copyright © 2024 Dhaval Dudheliya
+        </motion.p>
+
+        {/* Animate the social icons */}
+        <motion.div
+          ref={socialIconsRef}
+          className="flex items-center md:gap-3 gap-6"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{
+            opacity: areSocialIconsInView ? 1 : 0,
+            y: areSocialIconsInView ? 0 : 50,
+          }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+        >
           {socials.map((info, index) => (
             <a
               href={info.path}
@@ -67,7 +121,7 @@ const Footer = () => {
               <p>{info.icon}</p>
             </a>
           ))}
-        </div>
+        </motion.div>
       </div>
     </footer>
   );

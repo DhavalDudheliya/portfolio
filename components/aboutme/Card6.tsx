@@ -3,19 +3,10 @@ import { BackgroundGradientAnimation } from "../ui/GradientBg";
 import MagicButton from "../MagicButton";
 import animationData from "@/data/confetti.json";
 import { CopyIcon } from "lucide-react";
-import Lottie from "react-lottie";
+import { IoCheckmarkCircle } from "react-icons/io5";
 
 const Card6 = () => {
   const [copied, setCopied] = useState(false);
-
-  const defaultOptions = {
-    loop: copied,
-    autoplay: copied,
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
 
   const handleCopy = () => {
     const text = "dhavaldudheliya77@gmail.com";
@@ -47,14 +38,14 @@ const Card6 = () => {
             className={`absolute -bottom-5 right-0 ${
               copied ? "block" : "block"
             }`}
-          >
-            <Lottie options={defaultOptions} height={200} width={400} />
-          </div>
+          ></div>
 
           <div className="mt-5 md:mt-7">
             <MagicButton
               title={copied ? "Email is Copied!" : "Copy my email address"}
-              icon={<CopyIcon />}
+              icon={
+                copied ? <IoCheckmarkCircle color="#00ff99" size={20}/> : <CopyIcon />
+              }
               position="left"
               handleClick={handleCopy}
               otherClasses="!bg-[#161A31]"
