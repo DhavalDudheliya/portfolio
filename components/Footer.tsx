@@ -24,24 +24,23 @@ const socials = [
 const Footer = () => {
   // Hook for heading
   const { ref: headingRef, inView: isHeadingInView } = useInView({
-    triggerOnce: true, // Animation triggers only once
-    threshold: 0.1, // Trigger when 10% of the component is visible
+    triggerOnce: true,
+    threshold: 0.1,
   });
 
   // Hook for social icons
   const { ref: socialIconsRef, inView: areSocialIconsInView } = useInView({
-    triggerOnce: true, // Animation triggers only once
-    threshold: 0.1, // Trigger when 10% of the component is visible
+    triggerOnce: true,
+    threshold: 0.1,
   });
 
   return (
     <footer className="w-full pt-20 pb-10" id="contact">
       <div className="flex flex-col items-center">
-        {/* Animate the heading */}
         <motion.h1
           ref={headingRef}
           className="heading lg:max-w-[45vw]"
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: -50 }}
           animate={{
             opacity: isHeadingInView ? 1 : 0,
             y: isHeadingInView ? 0 : 50,
@@ -52,14 +51,23 @@ const Footer = () => {
           presence to the next level?
         </motion.h1>
 
-        <p className="text-white-200 md:mt-5 mt-5 mb-10 text-center">
+        <motion.p
+          ref={headingRef}
+          className="text-white-200 md:mt-5 mt-5 mb-10 text-center"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{
+            opacity: isHeadingInView ? 1 : 0,
+            y: isHeadingInView ? 0 : 50,
+          }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+        >
           Reach out to me today and let&apos;s discuss how I can help you
           achieve your goals.
-        </p>
+        </motion.p>
 
         <motion.div
           ref={headingRef}
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: -50 }}
           animate={{
             opacity: isHeadingInView ? 1 : 0,
             y: isHeadingInView ? 0 : 50,
@@ -89,7 +97,7 @@ const Footer = () => {
       <div className="flex mt-16 md:flex-row flex-col justify-between items-center gap-4">
         <motion.p
           ref={socialIconsRef}
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: -50 }}
           animate={{
             opacity: areSocialIconsInView ? 1 : 0,
             y: areSocialIconsInView ? 0 : 50,
@@ -100,11 +108,10 @@ const Footer = () => {
           Copyright © 2024 Dhaval Dudheliya
         </motion.p>
 
-        {/* Animate the social icons */}
         <motion.div
           ref={socialIconsRef}
           className="flex items-center md:gap-3 gap-6"
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: -50 }}
           animate={{
             opacity: areSocialIconsInView ? 1 : 0,
             y: areSocialIconsInView ? 0 : 50,

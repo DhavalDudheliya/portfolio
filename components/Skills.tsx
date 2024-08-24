@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import { skills } from "@/data";
@@ -6,6 +7,12 @@ import React from "react";
 const Skills = () => {
   // Hook for heading
   const { ref: headingRef, inView: isHeadingInView } = useInView({
+    triggerOnce: true, // Animation triggers only once
+    threshold: 0.1, // Trigger when 10% of the component is visible
+  });
+
+  // Hook for each skill logo
+  const { ref: skillRef, inView: isSkillInView } = useInView({
     triggerOnce: true, // Animation triggers only once
     threshold: 0.1, // Trigger when 10% of the component is visible
   });
@@ -29,12 +36,6 @@ const Skills = () => {
 
         <div className="flex flex-wrap gap-4 justify-center max-w-lg lg:max-w-[65vw]">
           {skills.map((skill, index) => {
-            // Hook for each skill logo
-            const { ref: skillRef, inView: isSkillInView } = useInView({
-              triggerOnce: true, // Animation triggers only once
-              threshold: 0.1, // Trigger when 10% of the component is visible
-            });
-
             return (
               <motion.div
                 key={skill.id}

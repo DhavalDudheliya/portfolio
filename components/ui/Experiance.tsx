@@ -47,6 +47,7 @@ const Experience = () => {
         {workExperience.map((card, index) => {
           return (
             <Button
+              key={index}
               duration={Math.floor(Math.random() * 10000) + 10000}
               borderRadius="1.75rem"
               style={{

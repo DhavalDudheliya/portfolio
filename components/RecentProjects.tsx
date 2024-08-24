@@ -12,49 +12,20 @@ import { FaLocationArrow } from "react-icons/fa";
 import { FaCircleDot } from "react-icons/fa6";
 
 const RecentProjects = () => {
-  // Hook for heading
-  const { ref: headingRef, inView: isHeadingInView } = useInView({
-    triggerOnce: true, // Animation triggers only once
-    threshold: 0.1, // Trigger when 10% of the component is visible
-  });
-
   return (
     <div className="py-20" id="projects">
       {/* Animate the heading */}
-      <motion.h1
-        ref={headingRef}
-        className="heading"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{
-          opacity: isHeadingInView ? 1 : 0,
-          y: isHeadingInView ? 0 : 50,
-        }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
-      >
+      <h1 className="heading">
         A small selection of <span className="text-green">recent projects</span>
-      </motion.h1>
+      </h1>
 
       <div className="flex flex-wrap items-center justify-center p-4 gap-x-24 gap-y-8 mt-10">
         {projects.map(
           ({ id, title, des, img, iconLists, link, live }, index) => {
-            // Hook for each project card
-            const { ref, inView } = useInView({
-              triggerOnce: true, // Animation triggers only once
-              threshold: 0.1, // Trigger when 10% of the component is visible
-            });
-
             return (
-              <motion.div
+              <div
                 key={id}
-                ref={ref}
                 className="sm:h-[41rem] h-[32rem] lg:min-h-[32.5rem] flex items-center justify-center sm:w-[570px] w-[80vh]"
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
-                transition={{
-                  duration: 0.5,
-                  ease: "easeOut",
-                  delay: index * 0.1,
-                }}
               >
                 <PinContainer title={link} href={link}>
                   <div className="relative flex items-center justify-center sm:w-[570px] w-[80vw] overflow-hidden sm:h-[40vh] mb-5 h-[30vh] rounded-xl">
@@ -92,7 +63,7 @@ const RecentProjects = () => {
                     </div>
                   </div>
                 </PinContainer>
-              </motion.div>
+              </div>
             );
           }
         )}
