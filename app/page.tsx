@@ -14,7 +14,7 @@ import { FaProjectDiagram } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
 import React from "react";
 
-export const navItems = [
+const navItems = [
   { name: "Home", link: "#home", icon: <FaHome /> },
   { name: "About", link: "#about", icon: <FaUser /> },
   { name: "Skills", link: "#skills", icon: <FaTools /> },
