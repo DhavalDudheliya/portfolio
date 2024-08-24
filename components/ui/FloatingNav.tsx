@@ -8,7 +8,6 @@ import {
 } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { FaHome } from "react-icons/fa";
 
 export const FloatingNav = ({
   navItems,

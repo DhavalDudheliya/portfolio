@@ -14,13 +14,7 @@ import { FaProjectDiagram } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
 import React from "react";
 
-interface NavItem {
-  name: string;
-  link: string;
-  icon?: JSX.Element; // Optional, since not all items have an icon
-}
-
-export const navItems: NavItem[] = [
+export const navItems = [
   { name: "Home", link: "#home", icon: <FaHome /> },
   { name: "About", link: "#about", icon: <FaUser /> },
   { name: "Skills", link: "#skills", icon: <FaTools /> },

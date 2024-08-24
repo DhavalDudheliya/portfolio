@@ -1,5 +1,3 @@
-
-
 export const gridItems = [
     {
         id: 1,
