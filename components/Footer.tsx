@@ -75,7 +75,7 @@ const Footer = () => {
           transition={{ duration: 0.5, ease: "easeOut" }}
           className="flex flex-col lg:flex-row gap-4"
         >
-          <a target="_blank" href="mailto:dhavaldudheliya77@gmail.com">
+          <a href="mailto:dhavaldudheliya77@gmail.com">
             <MagicButton
               title="Let's get in touch"
               icon={<FaLocationArrow />}

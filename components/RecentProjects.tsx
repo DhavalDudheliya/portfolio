@@ -28,13 +28,13 @@ const RecentProjects = () => {
                 className="sm:h-[41rem] h-[32rem] lg:min-h-[32.5rem] flex items-center justify-center sm:w-[570px] w-[80vh]"
               >
                 <PinContainer title={link} href={link}>
-                  <div className="relative flex items-center justify-center sm:w-[570px] w-[80vw] overflow-hidden sm:h-[40vh] mb-5 h-[30vh] rounded-xl">
+                  <div className="relative flex items-center justify-center sm:w-[570px] w-[80vw] overflow-hidden sm:h-[40vh] mb-5 h-[20vh] rounded-xl">
                     <img src={img} alt={title} className="z-10" />
                   </div>
-                  <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
+                  <h1 className="font-bold lg:text-2xl md:text-xl text-base">
                     {title}
                   </h1>
-                  <p className="mt-1 font-extralight text-sm line-clamp-2 text-white/80">
+                  <p className="mt-1 font-extralight text-sm text-white/80">
                     {des}
                   </p>
                   <div className="flex items-center justify-between mt-7 mb-3">

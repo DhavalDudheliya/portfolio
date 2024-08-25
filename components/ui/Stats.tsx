@@ -2,6 +2,7 @@
 
 import CountUp from "react-countup";
 import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const ststs = [
   {
@@ -23,14 +24,19 @@ const ststs = [
 ];
 
 const Stats = () => {
+  const { ref: headingRef, inView: isHeadingInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
   return (
     <motion.section
+      ref={headingRef}
       initial={{ opacity: 0 }}
       animate={{
-        opacity: 1,
-        transition: { delay: 1.2, duration: 0.4, ease: "easeIn" },
+        opacity: isHeadingInView ? 1 : 0,
+        transition: { delay: 0.4, duration: 0.4, ease: "easeIn" },
       }}
-      className="pt-4 pb-2 xl:pt-28"
+      className="pt-4 pb-2 xl:pt-16"
     >
       <div className="container mx-auto">
         <div className="inline-flex flex-wrap justify-between w-full gap-6  mx-auto xl:max-w-none">
