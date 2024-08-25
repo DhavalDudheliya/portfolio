@@ -9,11 +9,19 @@ import Stats from "./ui/Stats";
 import { motion } from "framer-motion";
 
 const Hero = () => {
+  const handleClick = () => {
+    const link = document.createElement("a");
+    link.href = "/Dhaval_Dudheliya_Resume.pdf"; // Path to your resume file in the public directory
+    link.download = "Dhaval_Dudheliya_Resume.pdf"; // Name of the file to be downloaded
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
   return (
     <section className="pb-20 pt-32" id="home">
       <Spotlights />
       <GridBackGround />
-      <div className="mx-auto h-full relative"> 
+      <div className="mx-auto h-full relative">
         <div className="flex flex-col items-center justify-between">
           <div className="flex flex-col xl:flex-row items-center justify-between">
             <div className="text-center xl:text-left order-2 xl:order-none">
@@ -61,6 +69,7 @@ const Hero = () => {
                   title="Download CV"
                   icon={<Download height={20} width={20} color="#00ff99" />}
                   position="right"
+                  handleClick={handleClick}
                   cv={true}
                 />
                 <div className="mb-8 xl:mb-0">

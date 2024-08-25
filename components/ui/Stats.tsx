@@ -6,11 +6,11 @@ import { useInView } from "react-intersection-observer";
 
 const ststs = [
   {
-    num: 5,
+    num: 4,
     text: "Months of experiance",
   },
   {
-    num: 4,
+    num: 5,
     text: "Projects completed",
   },
   {
@@ -18,7 +18,7 @@ const ststs = [
     text: "Technologies mastered",
   },
   {
-    num: 320,
+    num: 365,
     text: "Code commits",
   },
 ];

@@ -18,6 +18,8 @@ const MagicButton = ({
   otherClasses,
   cv,
 }: Props) => {
+
+  
   return (
     <motion.button
       className="relative inline-flex h-10 lg:h-12 w-full overflow-hidden rounded-full p-[1px] focus:outline-none md:w-60"
