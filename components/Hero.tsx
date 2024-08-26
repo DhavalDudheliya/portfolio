@@ -11,8 +11,8 @@ import { motion } from "framer-motion";
 const Hero = () => {
   const handleClick = () => {
     const link = document.createElement("a");
-    link.href = "/Dhaval_Dudheliya_Resume.pdf"; // Path to your resume file in the public directory
-    link.download = "Dhaval_Dudheliya_Resume.pdf"; // Name of the file to be downloaded
+    link.href = "/Dhaval_Dudheliya_Resume.pdf";
+    link.download = "Dhaval_Dudheliya_Resume.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -23,7 +23,7 @@ const Hero = () => {
       <GridBackGround />
       <div className="mx-auto h-full relative">
         <div className="flex flex-col items-center justify-between">
-          <div className="flex flex-col xl:flex-row items-center justify-between">
+          <div className="flex flex-col xl:flex-row items-center justify-between xl:gap-10">
             <div className="text-center xl:text-left order-2 xl:order-none">
               <motion.div
                 initial={{ opacity: 0, x: -100 }}
