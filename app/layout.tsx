@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./provider";
-import Head from "next/head";
 import PageTransition from "@/components/ui/PageTransition";
 import StairEffect from "@/components/ui/StairEffect";
 
