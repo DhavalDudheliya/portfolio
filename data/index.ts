@@ -81,6 +81,15 @@ export const projects = [
         link: "https://github.com/DhavalDudheliya/LoastAndFound",
         live: false,
     },
+    {
+        id: 2,
+        title: "Duolingo Clone 🦉",
+        des: "A Duolingo-inspired language learning website built with Next.js, featuring AI-generated voices, Clerk authentication, Stripe payments, PostgreSQL, and Drizzle ORM. Includes admin dashboard, units, lessons, points, hearts, quests, leaderboards, and a shop.",
+        img: "/p3.png",
+        iconLists: ["/next.svg", "/tail.svg", "/clerk.png", "/drizzle.png", "/post.png", "/stripe.svg"],
+        link: "https://github.com/DhavalDudheliya/DuoLingo_Clone",
+        live: true,
+    },
 ];
 
 export const testimonials = [

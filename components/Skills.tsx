@@ -49,7 +49,7 @@ const Skills = () => {
           {skills.map((skill, index) => {
             return (
               <>
-                <div className="group">
+                <div className="group" key={skill.id}>
                   <Tooltip>{skill.name}</Tooltip>
                   <motion.div
                     key={skill.id}
