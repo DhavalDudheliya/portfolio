@@ -5,7 +5,6 @@ import Grid from "@/components/Grid";
 import Hero from "@/components/Hero";
 import RecentProjects from "@/components/RecentProjects";
 import Skills from "@/components/Skills";
-import Experience from "@/components/ui/Experiance";
 import { FloatingNav } from "@/components/ui/FloatingNav";
 import { FaHome } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
@@ -13,6 +12,7 @@ import { FaTools } from "react-icons/fa";
 import { FaProjectDiagram } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
 import React from "react";
+import Experience from "@/components/Experiance";
 
 const navItems = [
   { name: "Home", link: "#home", icon: <FaHome /> },

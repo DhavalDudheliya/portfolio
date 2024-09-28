@@ -3,7 +3,7 @@ import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import React from "react";
 import { workExperience } from "@/data";
-import { Button } from "../ui/MovingBorders";
+import { Button } from "./ui/MovingBorders";
 
 const Experience = () => {
   // Hook for heading
@@ -31,7 +31,7 @@ const Experience = () => {
         }}
         transition={{ duration: 0.4, ease: "easeOut" }}
       >
-        My <span className="text-green">Internship and Training</span>
+        My <span className="text-green">Experience</span>
       </motion.h1>
 
       <motion.div
@@ -68,7 +68,13 @@ const Experience = () => {
                   <h1 className="text-start text-xl md:text-2xl font-bold">
                     {card.title}
                   </h1>
-                  <p className="text-start text-white-100 mt-3 font-semibold">
+                  <p className="text-start text-white-300 mt-1 text-xs">
+                    {card.company}, {card.location}
+                  </p>
+                  <p className="text-start text-white-300 text-xs">
+                    {card.Duration}
+                  </p>
+                  <p className="text-start text-white-100 mt-4 font-semibold">
                     {card.desc}
                   </p>
                 </div>

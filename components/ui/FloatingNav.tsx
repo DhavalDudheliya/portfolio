@@ -62,7 +62,7 @@ export const FloatingNav = ({
         )}
       >
         <p className="mr-8 md:mr-16 lg:mr-32">
-          Dhaval<span className="text-green">.</span>
+          Dhaval<span className="text-green">.js</span>
         </p>
         {navItems.map((navItem: any, idx: number) => (
           <Link
