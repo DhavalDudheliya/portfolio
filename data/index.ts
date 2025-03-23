@@ -165,7 +165,7 @@ export const workExperience = [
         company: "WhiteStone Infotech",
         location: "Surat, India",
         Duration: "September 2024 - Present",
-        desc: "",
+        desc: "Implemented Redis, BullMQ, and AWS S3 for efficient job queuing, background processing, and secure media storage, enhancing performance and scalability. Developed Voice Copilot and an AI-powered outbound call system using ElevenLabs and Twilio, enabling automated website interactions and intelligent user follow-ups.",
         className: "md:col-span-2",
         thumbnail: "/exp1.svg",
     },
@@ -249,36 +249,41 @@ export const skills = [
     },
     {
         id: 12,
+        name: "MUI",
+        img: "/MUI.png"
+    },
+    {
+        id: 13,
         name: "Redux",
         img: "/redux.png"
     },
     {
-        id: 13,
+        id: 14,
         name: "Jest",
         img: "/jest.png"
     },
+    // {
+    //     id: 15,
+    //     name: "MYSql",
+    //     img: "/mysql.png"
+    // },
     {
-        id: 14,
-        name: "MYSql",
-        img: "/mysql.png"
-    },
-    {
-        id: 15,
+        id: 16,
         name: "PostgreSql",
         img: "/post.png"
     },
     {
-        id: 16,
+        id: 17,
         name: "C++",
         img: "/cpp.png"
     },
     {
-        id: 17,
+        id: 18,
         name: "Python",
         img: "/py.png"
     },
     {
-        id: 18,
+        id: 19,
         name: "GitHub",
         img: "/git.png"
     },

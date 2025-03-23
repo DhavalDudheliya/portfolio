@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@sentry/nextjs": "^8.26.0",
+    "axios": "^1.8.4",
     "clsx": "^2.1.1",
     "framer-motion": "^11.3.28",
     "lucide-react": "^0.429.0",

@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import React from "react";
 
 const Card3 = () => {
-  const leftLists = ["ReactJS", "NodeJS", "ExpressJs"];
+  const leftLists = ["ExpressJs", "ReactJs", "NodeJs"];
   const rightLists = ["NextJs", "TypeScript", "MongoDB"];
   return (
     <div className="group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 justify-center">
@@ -20,9 +20,9 @@ const Card3 = () => {
               key={i} 
               className={`lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-sm opacity-50 
             lg:opacity-100 rounded-lg text-center bg-[#10132E] ${
-              i == 0
+              i == 1
                 ? "text-sky-400"
-                : i == 1
+                : i == 2
                 ? "text-green-600"
                 : "text-yellow-200"
             }`}

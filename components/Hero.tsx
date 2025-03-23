@@ -53,9 +53,8 @@ const Hero = () => {
                   transition={{ delay: 0.4, duration: 1 }}
                   className="max-w-[500px] mt-4 mb-9 text-white/80 ml-1"
                 >
-                  based in India📍. I excel at crafting elegant digital
-                  experiences and I am proficient in various programming
-                  languages and technologies.
+                  based in India📍. Eager to learn new technologies and deliver the best results. Skilled in building
+                  scalable, high-performing applications while ensuring clean and maintainable code.
                 </motion.p>
               </motion.div>
 
