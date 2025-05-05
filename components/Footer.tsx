@@ -105,7 +105,7 @@ const Footer = () => {
           transition={{ duration: 0.5, ease: "easeOut" }}
           className="md:text-base text-sm md:font-normal font-light"
         >
-          Copyright © 2024 Dhaval Dudheliya
+          Dhaval Dudheliya
         </motion.p>
 
         <motion.div
